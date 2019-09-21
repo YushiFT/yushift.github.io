@@ -1,0 +1,87 @@
+---
+title: "Yushi's Teaching Experience"
+date: 09/21/2019 (updated)
+output:
+  html_document:
+    code_folding: show
+    highlight: tango
+    keep_md: yes
+    number_sections: no
+    theme: spacelab
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+      toc_depth: 3
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+###  普林斯顿大学课程
+
+. . . . . . 
+
+
+###  哈佛大学课程
+
+    课程编号: STAT 215 / STAT 115 / BST 282
+    
+    课程名称: 计算生物学与生物信息学导论
+    
+    学期: 2018-2019学年春季学期
+    
+    授课教授: Dr. X. Shirley Liu
+
+
+###### 2.1 课程网站: [Canvas](https://canvas.harvard.edu/courses/49497)
+
+###### 2.2 课程评价: [学生评价](https://github.com/YushiFT/yushift.github.io/tree/master/en/teaching) about Prof. Liu and me 
+
+###### 2.3 我的授课章节:
+
+###### Lab 5: Bioinformatic Tools for RNA-seq Analysis, DESeq2, and Cluster Computing ( [video](https://www.youtube.com/watch?v=mz64t8-xWgg&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=3&t=4s) and [material](https://github.com/stat115/Lab5) )
+
+
+###### Lab 6: Single Cell RNA-seq Analysis and Optimizing I/O Performance on the Cluster ( [video 1](https://www.youtube.com/watch?v=8lZXWAmg9sE&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=3), [video 2](https://www.youtube.com/watch?v=CidSoNLWXUg&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=4) and [material](https://github.com/stat115/Lab6) )
+
+
+###### Lab 7: ChIP-seq data analysis, Bedtools, UCSC Genome Browser, Cistrome and Odyssey ( [video](https://www.youtube.com/watch?v=US5DPGkUBbQ&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=5) and [material](https://github.com/stat115/Lab7) )
+
+
+###### Lab 8: BETA, VCF, ChIP-seq Motifs Analysis ( [video](https://www.youtube.com/watch?v=QbIXoj2Us1w&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=6) and [material](https://github.com/stat115/Lab8) )
+
+
+###### Lab 9: Hidden Markov Model and TCGA Data ( [video 1](https://www.youtube.com/watch?v=Z-mC-8RDD9U&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=7), [video 2](https://www.youtube.com/watch?v=_8FrxmIYVK4&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=8) and [material](https://github.com/stat115/Lab9) )
+
+
+###### Lab 10: GWAS, HaploReg, RegulomeDB, Regression, and Feature Selection ( [video](https://www.youtube.com/watch?v=48coCc6RXzI&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=9) and [material](https://github.com/stat115/Lab10) )
+
+
+-------------------------------------------
+
+
+    课程编号: BST 215
+    
+    课程名称: Linear and Longitudinal Regression
+    
+    学期: 2017-2018学年夏季学期
+    
+    授课教授: Dr. Garrett Fitzmaurice
+
+
+###### 1.1 课程网站: [Canvas](https://canvas.harvard.edu/courses/41831)
+
+###### 1.2 课程评价: [学生评价](https://github.com/YushiFT/yushift.github.io/blob/master/en/teaching/BST215_Evaluation.pdf) about Prof. Fitzmaurice and me 
+
+------------------------------------------------
+
+
+### 回到主页
+[Homepage](https://yushift.github.io)
+
+
