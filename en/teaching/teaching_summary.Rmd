@@ -1,0 +1,136 @@
+---
+title: "Yushi's Teaching Experience"
+date: '`r format(Sys.time(), "%d %B, %Y")`'
+output: 
+  html_document:
+    code_folding: show
+    highlight: tango
+    keep_med: true
+    number_sections: false
+    theme: journal
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+      toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+##  Courses at Princeton as an AI {.tabset .tabset-fade .tabset-pills}
+
+### QCB508 / QCB408 / Foundations of Statistical Genomics
+
+    Course ID: QCB 508 / QCB 408 / BST 282
+    
+    Title: Foundations of Statistical Genomics
+    
+    Semester: 2022 Spring
+    
+    Instructor: Dr. John D. Storey
+    
+#### 3.1 Course Website: [Canvas](https://princeton.instructure.com/courses/7114)
+
+#### 3.2 Office Hour Recap
+
+*Preface: This is a brief summary based on the conversations during Yushi's office hour in Spring 2022. Due to the pandemic, we needed to hold our office hours virtually for this semester. I was unable to provide detailed proof or answers without a blackboard. I listed these details here and I hope that they can help our friends to learn something.*
+
+**Feb 15, 2022**
+
+$\underline{Hints\,\,for\,\,the\,\,law\,\,of\,\,total\,\,variance.}$
+
+Let us begin by proving a simple version of the law of total variance
+
+\begin{align}
+\mathbb{V}(X) &= \mathbb{E}\big[(X-\mathbb{E}[X])^2\big] \nonumber \\
+&= \mathbb{E}\big[(X-\mathbb{E}[X|Y]+\mathbb{E}[X|Y]-\mathbb{E}[X])^2\big] \nonumber \\
+&= \Big\{\mathbb{E}\big[(X-\mathbb{E}[X|Y])^2\big] + 2\mathbb{E}\big[(X-\mathbb{E}[X|Y])(\mathbb{E}[X|Y]-\mathbb{E}[X])\big] \Big\}+ \mathbb{E}\big[(\mathbb{E}[X|Y]-\mathbb{E}[X])^2\big] \nonumber \\
+&= \Big\{\mathbb{E}[X^2]-\mathbb{E}[(\mathbb{E}[X|Y])^2]\Big\} + \mathbb{E}\big[(\mathbb{E}[X|Y]-\mathbb{E}[\mathbb{E}[X|Y]])^2\big] \nonumber \\
+&= \mathbb{E}\big[\mathbb{E}[X^2|Y]-(\mathbb{E}[X|Y])^2\big] + \mathbb{V}(\mathbb{E}[X|Y]) \nonumber \\
+&= \mathbb{E}[\mathbb{V}(X|Y)] + \mathbb{V}(\mathbb{E}[X|Y]).
+\end{align}
+
+Line 1 (expand the variance/covariance term by definition) and line 2 (little trick to introduce the conditional term) may provide hints for proving the following equation 
+
+\begin{equation}
+\text{Cov}(X,Y)=\mathbb{E}[\text{Cov}(X,Y|Z)]+\text{Cov}(\mathbb{E}[X|Z],\mathbb{E}[Y|Z]).
+\end{equation}
+
+More specifically, try to think about two questions: 1) what is the math definition of $\text{Cov}(X,Y)$; 2) how to introduce the conditional terms into the expanded version of $\text{Cov}(X,Y)$.
+
+##  Courses at Harvard as a TA {.tabset .tabset-fade .tabset-pills}
+
+### STAT215 / STAT115 / BST282 / Introduction to Computational Biology and Bioinformatics
+
+    Course ID: STAT 215 / STAT 115 / BST 282
+    
+    Title: Introduction to Computational Biology and Bioinformatics
+    
+    Semester: 2019 Spring
+    
+    Instructor: Dr. X. Shirley Liu
+
+
+#### 2.1 Course Website: [Canvas](https://canvas.harvard.edu/courses/49497)
+
+#### 2.2 Evaluation: [Students' comments](https://github.com/YushiFT/yushift.github.io/tree/master/en/teaching) about Prof. Liu and me 
+
+---------------------------------------------------
+
+![](./stat115_eva.png){width=100%}
+
+
+---------------------------------------------------
+
+#### 2.3 Chapters Instructed by Me:
+
+###### Lab 5: Bioinformatic Tools for RNA-seq Analysis, DESeq2, and Cluster Computing ( [video](https://www.youtube.com/watch?v=mz64t8-xWgg&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=3&t=4s) and [material](https://github.com/stat115/Lab5) )
+
+
+###### Lab 6: Single Cell RNA-seq Analysis and Optimizing I/O Performance on the Cluster ( [video 1](https://www.youtube.com/watch?v=8lZXWAmg9sE&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=3), [video 2](https://www.youtube.com/watch?v=CidSoNLWXUg&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=4) and [material](https://github.com/stat115/Lab6) )
+
+
+###### Lab 7: ChIP-seq data analysis, Bedtools, UCSC Genome Browser, Cistrome and Odyssey ( [video](https://www.youtube.com/watch?v=US5DPGkUBbQ&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=5) and [material](https://github.com/stat115/Lab7) )
+
+
+###### Lab 8: BETA, VCF, ChIP-seq Motifs Analysis ( [video](https://www.youtube.com/watch?v=QbIXoj2Us1w&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=6) and [material](https://github.com/stat115/Lab8) )
+
+
+###### Lab 9: Hidden Markov Model and TCGA Data ( [video 1](https://www.youtube.com/watch?v=Z-mC-8RDD9U&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=7), [video 2](https://www.youtube.com/watch?v=_8FrxmIYVK4&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=8) and [material](https://github.com/stat115/Lab9) )
+
+
+###### Lab 10: GWAS, HaploReg, RegulomeDB, Regression, and Feature Selection ( [video](https://www.youtube.com/watch?v=48coCc6RXzI&list=PL1LC4fx-wvLcqOtVMp48f9kVaGA9JQLLP&index=9) and [material](https://github.com/stat115/Lab10) )
+
+
+-------------------------------------------
+
+### BST215 / Linear and Longitudinal Regression
+
+
+    Course ID: BST 215
+    
+    Title: Linear and Longitudinal Regression
+    
+    Semester: 2018 Summer
+    
+    Instructor: Dr. Garrett Fitzmaurice
+
+
+#### 1.1 Course Website: [Canvas](https://canvas.harvard.edu/courses/41831)
+
+#### 1.2 Evaluation: [Students' comments](https://github.com/YushiFT/yushift.github.io/blob/master/en/teaching/BST215_Evaluation.pdf) about Prof. Fitzmaurice and me 
+
+-------------------------------------
+
+![](./bst215_eva.png){width=100%}
+
+------------------------------------------------
+
+
+## Back to Home
+[Homepage](https://yushift.github.io)
+
+
