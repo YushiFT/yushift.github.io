@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### QCB508 / QCB408 / Foundations of Statistical Genomics
 
-    Course ID: QCB 508 / QCB 408 / BST 282
+    Course ID: QCB 508 / QCB 408 
     
     Title: Foundations of Statistical Genomics
     
