@@ -59,7 +59,15 @@ Line 1 (expand the variance/covariance term by definition) and line 2 (little tr
 \text{Cov}(X,Y)=\mathbb{E}[\text{Cov}(X,Y|Z)]+\text{Cov}(\mathbb{E}[X|Z],\mathbb{E}[Y|Z]).
 \end{equation}
 
-More specifically, try to think about two questions: 1) what is the math definition of $\text{Cov}(X,Y)$; 2) how to introduce the conditional terms into the expanded version of $\text{Cov}(X,Y)$.
+More specifically, try to think about two questions: 1) what is the math definition of $\text{Cov}(X,Y)$; 2) how to introduce the conditional terms into the expanded version of $\text{Cov}(X,Y)$. More details for deriving the first term in line 4 from line 3 
+
+\begin{align}
+\mathbb{E}\big[(X-\mathbb{E}[X|Y])\big]&=\mathbb{E}[X^2]-2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]+\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big] \nonumber \\
+2\mathbb{E}\big[(X-\mathbb{E}[X|Y])(\mathbb{E}[X|Y]-\mathbb{E}[X])\big] &= 2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]-2\mathbb{E}\big[XE[X]\big]-2\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big]+2\mathbb{E}\big[\mathbb{E}[X|Y]\mathbb{E}[X]\big] \nonumber \\
+&= 2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]-2(\mathbb{E}[X])^2-2\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big]+2(\mathbb{E}[X])^2 \nonumber \\
+&= 2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]-2\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big] \nonumber \\
+\Rightarrow \mathbb{E}\big[(X-\mathbb{E}[X|Y])\big]+ 2\mathbb{E}\big[(X-\mathbb{E}[X|Y])(\mathbb{E}[X|Y]-\mathbb{E}[X])\big] &= \mathbb{E}[X^2]-\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big].
+\end{align}
 
 ##  Courses at Harvard as a TA {.tabset .tabset-fade .tabset-pills}
 

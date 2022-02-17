@@ -1565,7 +1565,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Yushi’s Teaching Experience</h1>
-<h4 class="date">15 February, 2022</h4>
+<h4 class="date">17 February, 2022</h4>
 
 </div>
 
@@ -1602,7 +1602,14 @@ Instructor: Dr. John D. Storey</code></pre>
 <p><span class="math display">\[\begin{equation}
 \text{Cov}(X,Y)=\mathbb{E}[\text{Cov}(X,Y|Z)]+\text{Cov}(\mathbb{E}[X|Z],\mathbb{E}[Y|Z]).
 \end{equation}\]</span></p>
-<p>More specifically, try to think about two questions: 1) what is the math definition of <span class="math inline">\(\text{Cov}(X,Y)\)</span>; 2) how to introduce the conditional terms into the expanded version of <span class="math inline">\(\text{Cov}(X,Y)\)</span>.</p>
+<p>More specifically, try to think about two questions: 1) what is the math definition of <span class="math inline">\(\text{Cov}(X,Y)\)</span>; 2) how to introduce the conditional terms into the expanded version of <span class="math inline">\(\text{Cov}(X,Y)\)</span>. More details for deriving the first term in line 4 from line 3</p>
+<p><span class="math display">\[\begin{align}
+\mathbb{E}\big[(X-\mathbb{E}[X|Y])\big]&amp;=\mathbb{E}[X^2]-2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]+\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big] \nonumber \\
+2\mathbb{E}\big[(X-\mathbb{E}[X|Y])(\mathbb{E}[X|Y]-\mathbb{E}[X])\big] &amp;= 2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]-2\mathbb{E}\big[XE[X]\big]-2\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big]+2\mathbb{E}\big[\mathbb{E}[X|Y]\mathbb{E}[X]\big] \nonumber \\
+&amp;= 2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]-2(\mathbb{E}[X])^2-2\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big]+2(\mathbb{E}[X])^2 \nonumber \\
+&amp;= 2\mathbb{E}\big[X\mathbb{E}[X|Y]\big]-2\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big] \nonumber \\
+\Rightarrow \mathbb{E}\big[(X-\mathbb{E}[X|Y])\big]+ 2\mathbb{E}\big[(X-\mathbb{E}[X|Y])(\mathbb{E}[X|Y]-\mathbb{E}[X])\big] &amp;= \mathbb{E}[X^2]-\mathbb{E}\big[(\mathbb{E}[X|Y])^2\big].
+\end{align}\]</span></p>
 </div>
 </div>
 </div>
