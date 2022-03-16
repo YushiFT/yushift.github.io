@@ -38,6 +38,31 @@ knitr::opts_chunk$set(echo = TRUE)
 
 *Preface: This is a brief summary based on the conversations during Yushi's office hour in Spring 2022. Due to the pandemic, we needed to hold our office hours virtually for this semester. I was unable to provide detailed proof or answers without a blackboard. I listed these details here and I hope that they can help our friends to learn something.*
 
+**Mar 15, 2022**
+
+$\underline{Understand\,\,distribution\,\,of\,\,a\,\,random\,\,variable\,\,by\,\,integrals}$
+
+Let $(\Omega,\mathcal{F},\mathbb{P})$ be a probability space, $(E,\mathcal{E})$ be a measurable space. Expectations of random variable $X:\Omega\mapsto E$ can be interpreted as integrals with respect to $\mathbb{P}$. Let $\mu$ be the distribution of $X$. We can interpret $\mu$ as the image of $\mathbb{P}$ under $X$. For event $A\in \mathcal{F}$, we write the probability that $X$ is in $A$ as \begin{equation}
+\mu(A) = \mathbb{P}(X^{-1}A) = \mathbb{P}(X\in A).
+\end{equation} Note that $X^{-1}A$ means that $X$ is measurable relative to $\mathcal{F}$ and $\mathcal{E}$, i.e., the event for every $A$ in $\mathcal{E} is written as $\begin{equation}
+X^{-1}A = \{X\in A\} = \{\omega \in \Omega:X(\omega) \in A\}
+\end{equation}
+
+$\underline{Theorem}$. Let function $f:E\mapsto \Omega$ be measurable relative to $\mathcal{E}$ and $\mathcal{F}$. We define the composition $Y=f\circ X$, which is a random variable taking values in $(\Omega, \mathcal{F})$ by \begin{equation} 
+Y(\omega) = f\circ X(\omega) = f(X(\omega)),\,\,\,\,\,\,\text{for}\,\,\,\omega \in \Omega.
+\end{equation} If $f$ is positive $\mathcal{E}$-measurable, then \begin{equation}
+\mathbb{E}[f\circ X] = \mu f.
+\end{equation}
+
+$\underline{Corollary}$. Define the indicator function \begin{equation}\mathbb{1}_{A} = \begin{cases} 1, \,\,\,\text{if } X\in A,\\0, \,\,\,\text{if } X\notin A. \end{cases} \end{equation} Notice that $\mathbb{1}_{A}$ is positive $\mathcal{E}$-measurable. Let $f=\mathbb{1}_{A}$, then we write $\mu$, the distribution of $X$, as \begin{equation}
+\mu(A) = \mu \mathbb{1}_{A} = \mathbb{E}[\mathbb{1}_{A}\circ X] = \mathbb{P}(X\in A) \cdot 1 + \mathbb{P}(X\notin A) \cdot 0 = \mathbb{P}(X\in A),
+\end{equation} which is the integral understanding of the distribution of a random variable. A useful application of this corollary is to calculate the p.d.f., i.e., to characterize the distribution, of a random variable when having prior information regarding the target random variable conditioning on other variables. Let us take a look at the following example. 
+
+$\underline{Example\,\,(Distribution\,\,of\,\,random\,\,genotype)}.$ Let $X$ be the random genotype in the random-allele-frequency model. We want to characterize the distribution of $X$ but the only information we know is the conditional distribution of $X$ given individual-allele-frequency $\pi$, written as $X|\pi \sim \text{Binomial}(2,\pi)$. Here $\pi$ comes from some other distributions. A strong candidate for this is BN$(p,f)$. We can use the above corollary to derive the distribution of $X$. There are three possible outcomes of $X$ as 0, 1, or 2. For event $A=\{\omega\in \Omega: X(\omega)=0\}$, we have \begin{align}
+\mathbb{P}(X=0) &= \mathbb{P}(A)= \mathbb{E}[\mathbb{P}(A|\pi)] = \mathbb{E}\big[\mathbb{E}[\mathbb{1}_{A}|\pi]\big] \nonumber \\
+&= \mathbb{E}\big[\mathbb{E}[\mathbb{1}_{X=0}|\pi]\big] = \mathbb{E}\big[(1-\pi)^2\big] = \cdots
+\end{align} The remaining path can be walked through by following $\mathbb{E}[Z^2]=(\mathbb{E}[Z])^2+\mathbb{V}(Z)$ while taking $Z=1-\pi$. The same strategy yields $\mathbb{P}(X=1)$ and $\mathbb{P}(X=2)$.
+
 **Feb 24, 2022**
 
 $\underline{Conditional\,\,distribution\,\,to\,\,model\,\,the\,\,allele\,\,evolution\,\,in\,\,finite\,\,population}$
