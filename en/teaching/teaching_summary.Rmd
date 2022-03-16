@@ -42,11 +42,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 $\underline{Understand\,\,distribution\,\,of\,\,a\,\,random\,\,variable\,\,by\,\,integrals}$
 
-Let $(\Omega,\mathcal{F},\mathbb{P})$ be a probability space, $(E,\mathcal{E})$ be a measurable space. Expectations of random variable $X:\Omega\mapsto E$ can be interpreted as integrals with respect to $\mathbb{P}$. Let $\mu$ be the distribution of $X$. We can interpret $\mu$ as the image of $\mathbb{P}$ under $X$. For event $A\in \mathcal{F}$, we write the probability that $X$ is in $A$ as \begin{equation}
-\mu(A) = \mathbb{P}(X^{-1}A) = \mathbb{P}(X\in A).
-\end{equation} Note that $X^{-1}A$ means that $X$ is measurable relative to $\mathcal{F}$ and $\mathcal{E}$, i.e., the event for every $A$ in $\mathcal{E}$ is written as \begin{equation}
-X^{-1}A = \{X\in A\} = \{\omega \in \Omega:X(\omega) \in A\}
-\end{equation}
+$\underline{Notations}$. Let $(\Omega,\mathcal{F},\mathbb{P})$ be a probability space, $(E,\mathcal{E})$ be a measurable space. Expectations of random variable $X:\Omega\mapsto E$ can be interpreted as integrals with respect to $\mathbb{P}$. Let $\mu$ be the distribution of $X$. We can interpret $\mu$ as the image of $\mathbb{P}$ under $X$. For event $A\in \mathcal{E}$, we write the probability that $X$ is in $A$ as \begin{equation}
+\mu(A) = \mathbb{P}(X^{-1}A) = \mathbb{P}(X\in A) = \mathbb{P}\{\omega \in \Omega:X(\omega) \in A\}.
+\end{equation} Note that $X^{-1}A$ denotes the event for every $A$ in $\mathcal{E}$. i.e., $X^{-1}A = \{X\in A\} = \{\omega \in \Omega:X(\omega) \in A\}$. It also suggests that $X$ is measurable relative to $\mathcal{F}$ and $\mathcal{E}$. 
 
 $\underline{Theorem}$. Let function $f:E\mapsto \Omega$ be measurable relative to $\mathcal{E}$ and $\mathcal{F}$. We define the composition $Y=f\circ X$, which is a random variable taking values in $(\Omega, \mathcal{F})$ by \begin{equation} 
 Y(\omega) = f\circ X(\omega) = f(X(\omega)),\,\,\,\,\,\,\text{for}\,\,\,\omega \in \Omega.
