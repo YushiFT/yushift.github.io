@@ -44,7 +44,7 @@ $\underline{Understand\,\,distribution\,\,of\,\,a\,\,random\,\,variable\,\,by\,\
 
 Let $(\Omega,\mathcal{F},\mathbb{P})$ be a probability space, $(E,\mathcal{E})$ be a measurable space. Expectations of random variable $X:\Omega\mapsto E$ can be interpreted as integrals with respect to $\mathbb{P}$. Let $\mu$ be the distribution of $X$. We can interpret $\mu$ as the image of $\mathbb{P}$ under $X$. For event $A\in \mathcal{F}$, we write the probability that $X$ is in $A$ as \begin{equation}
 \mu(A) = \mathbb{P}(X^{-1}A) = \mathbb{P}(X\in A).
-\end{equation} Note that $X^{-1}A$ means that $X$ is measurable relative to $\mathcal{F}$ and $\mathcal{E}$, i.e., the event for every $A$ in $\mathcal{E} is written as $\begin{equation}
+\end{equation} Note that $X^{-1}A$ means that $X$ is measurable relative to $\mathcal{F}$ and $\mathcal{E}$, i.e., the event for every $A$ in $\mathcal{E}$ is written as \begin{equation}
 X^{-1}A = \{X\in A\} = \{\omega \in \Omega:X(\omega) \in A\}
 \end{equation}
 
