@@ -38,6 +38,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 *Preface: This is a brief summary based on the conversations during Yushi's office hour in Spring 2022. Due to the pandemic, we needed to hold our office hours virtually for this semester. I was unable to provide detailed proof or answers without a blackboard. I listed these details here and I hope that they can help our friends to learn something.*
 
+**Mar 17, 2022**
+
+$\underline{Understand\,\,distribution\,,\,of\,\,a\,\,random\,\,variable\,\,(a\,\,simplified\,\,version)}$
+
+If my note on May 15, 2022 is too much, please check this simplified explanation and lemma. 
+
+$\underline{Lemma}$. Let $(\Omega,\mathcal{F},\mathbb{P})$ be a probability space, $(E,\mathcal{E})$ a measurable space, $A$ an event in $\mathcal{E}$. Define the indicator function \begin{equation}\mathbb{1}_{A}=\mathbb{1}_{A}(X) = \mathbb{1}_{A}\circ X = \begin{cases} 1, \,\,\,\text{if } X\in A,\\0, \,\,\,\text{if } X\notin A. \end{cases} \end{equation} Then \begin{equation}
+\mathbb{P(A)}=\mathbb{P}(X\in A)=\mathbb{E}[\mathbb{1}_{A}].
+\end{equation}
+
+*Proof.* Intuitively \begin{equation}
+\mathbb{P}(X\in A) = \mathbb{P}(X\in A)\cdot 1 + \mathbb{P}(X\notin A)\cdot 0 = \mathbb{P}(\mathbb{1}_{A}=1)\cdot 1 + \mathbb{P}(\mathbb{1}_A=0)\cdot 0 = \sum_i i \cdot \mathbb{P}(\mathbb{1}_A=i) = \mathbb{E}[\mathbb{1}_{A}].
+\end{equation}
+
+$\underline{Example\,\,(Distribution\,\,of\,\,random\,\,genotype)}.$ Let $X$ be the random genotype in the random-allele-frequency model. We want to characterize the distribution of $X$ but the only information we know is the conditional distribution of $X$ given individual-allele-frequency $\pi$, written as $X|\pi \sim \text{Binomial}(2,\pi)$. Here $\pi$ comes from some other distributions. A strong candidate for this is BN$(p,f)$. We can use the above corollary to derive the distribution of $X$. There are three possible outcomes of $X$ as 0, 1, or 2. For event $A_2=\{\omega\in \Omega: X(\omega)=2\}$, we have \begin{align}
+\mathbb{P}(X=2) &= \mathbb{P}(X\in A_2)= \mathbb{P}(X\in A_2)\cdot 1 + \mathbb{P}(X\notin A_2)\cdot 0 =\mathbb{E}[\mathbb{1}_{A_2}] = \mathbb{E}\big[\mathbb{E}[\mathbb{1}_{A_2}|\pi]\big] \nonumber \\
+&= \mathbb{E}\big[\mathbb{E}[\mathbb{1}_{X=2}|\pi]\big] = \mathbb{E}[\pi^2] = (\mathbb{E}[\pi])^2 + \mathbb{V}(\pi).
+\end{align} The same strategy yields $\mathbb{P}(X=0)$ and $\mathbb{P}(X=1)$.
+
 **Mar 15, 2022**
 
 $\underline{Understand\,\,distribution\,\,of\,\,a\,\,random\,\,variable\,\,by\,\,integrals}$
@@ -58,8 +77,8 @@ $\underline{Corollary}$. Define the indicator function \begin{equation}\mathbb{1
 \mu(A) = \mu (\mathbb{1}_{A}) = \mathbb{E}[\mathbb{1}_{A}\circ X],
 \end{equation} which is the integral understanding of the distribution of a random variable. A useful application of this corollary is to calculate the p.d.f., i.e., to characterize the distribution, of a random variable when having prior information regarding the target random variable conditioning on other variables. Let us take a look at the following example. 
 
-$\underline{Example\,\,(Distribution\,\,of\,\,random\,\,genotype)}.$ Let $X$ be the random genotype in the random-allele-frequency model. We want to characterize the distribution of $X$ but the only information we know is the conditional distribution of $X$ given individual-allele-frequency $\pi$, written as $X|\pi \sim \text{Binomial}(2,\pi)$. Here $\pi$ comes from some other distributions. A strong candidate for this is BN$(p,f)$. We can use the above corollary to derive the distribution of $X$. There are three possible outcomes of $X$ as 0, 1, or 2. For event $A=\{\omega\in \Omega: X(\omega)=0\}$, we have \begin{align}
-\mathbb{P}(X=0) &= \mathbb{P}(X\in A)= \mathbb{P}(X\in A)\cdot 1 + \mathbb{P}(X\notin A)\cdot 0 =\mathbb{E}[\mathbb{1}_A \circ X] = \mathbb{E}\big[\mathbb{E}[\mathbb{1}_{A}\circ X|\pi]\big] \nonumber \\
+$\underline{Example\,\,(Distribution\,\,of\,\,random\,\,genotype)}.$ Let $X$ be the random genotype in the random-allele-frequency model. We want to characterize the distribution of $X$ but the only information we know is the conditional distribution of $X$ given individual-allele-frequency $\pi$, written as $X|\pi \sim \text{Binomial}(2,\pi)$. Here $\pi$ comes from some other distributions. A strong candidate for this is BN$(p,f)$. We can use the above corollary to derive the distribution of $X$. There are three possible outcomes of $X$ as 0, 1, or 2. For event $A_0=\{\omega\in \Omega: X(\omega)=0\}$, we have \begin{align}
+\mathbb{P}(X=0) &= \mathbb{P}(X\in A_0)= \mathbb{P}(X\in A_0)\cdot 1 + \mathbb{P}(X\notin A_0)\cdot 0 =\mathbb{E}[\mathbb{1}_{A_0} \circ X] = \mathbb{E}\big[\mathbb{E}[\mathbb{1}_{A_0}\circ X|\pi]\big] \nonumber \\
 &= \mathbb{E}\big[\mathbb{E}[\mathbb{1}_{X=0}|\pi]\big] = \mathbb{E}\big[(1-\pi)^2\big] = \cdots
 \end{align} The remaining path can be walked through by following $\mathbb{E}[Z^2]=(\mathbb{E}[Z])^2+\mathbb{V}(Z)$ while taking $Z=1-\pi$. The same strategy yields $\mathbb{P}(X=1)$ and $\mathbb{P}(X=2)$.
 
