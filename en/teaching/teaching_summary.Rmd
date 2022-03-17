@@ -45,7 +45,7 @@ $\underline{Understand\,\,distribution\,\,of\,\,a\,\,random\,\,variable\,\,(a\,\
 If my note on May 15, 2022 is too much, please check this simplified explanation and lemma. 
 
 $\underline{Lemma}$. Let $(\Omega,\mathcal{F},\mathbb{P})$ be a probability space, $(E,\mathcal{E})$ a measurable space, $A$ an event in $\mathcal{E}$. Define the indicator function \begin{equation}\mathbb{1}_{A}=\mathbb{1}_{A}(X) = \mathbb{1}_{A}\circ X = \begin{cases} 1, \,\,\,\text{if } X\in A,\\0, \,\,\,\text{if } X\notin A. \end{cases} \end{equation} Then \begin{equation}
-\mathbb{P(A)}=\mathbb{P}(X\in A)=\mathbb{E}[\mathbb{1}_{A}].
+\mathbb{P}(X\in A)=\mathbb{E}[\mathbb{1}_{A}].
 \end{equation}
 
 *Proof.* Intuitively \begin{equation}

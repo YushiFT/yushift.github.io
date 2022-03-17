@@ -1591,7 +1591,7 @@ Instructor: Dr. John D. Storey</code></pre>
 <p><span class="math inline">\(\underline{Understand\,\,distribution\,\,of\,\,a\,\,random\,\,variable\,\,(a\,\,simplified\,\,version)}\)</span></p>
 <p>If my note on May 15, 2022 is too much, please check this simplified explanation and lemma.</p>
 <p><span class="math inline">\(\underline{Lemma}\)</span>. Let <span class="math inline">\((\Omega,\mathcal{F},\mathbb{P})\)</span> be a probability space, <span class="math inline">\((E,\mathcal{E})\)</span> a measurable space, <span class="math inline">\(A\)</span> an event in <span class="math inline">\(\mathcal{E}\)</span>. Define the indicator function <span class="math display">\[\begin{equation}\mathbb{1}_{A}=\mathbb{1}_{A}(X) = \mathbb{1}_{A}\circ X = \begin{cases} 1, \,\,\,\text{if } X\in A,\\0, \,\,\,\text{if } X\notin A. \end{cases} \end{equation}\]</span> Then <span class="math display">\[\begin{equation}
-\mathbb{P(A)}=\mathbb{P}(X\in A)=\mathbb{E}[\mathbb{1}_{A}].
+\mathbb{P}(X\in A)=\mathbb{E}[\mathbb{1}_{A}].
 \end{equation}\]</span></p>
 <p><em>Proof.</em> Intuitively <span class="math display">\[\begin{equation}
 \mathbb{P}(X\in A) = \mathbb{P}(X\in A)\cdot 1 + \mathbb{P}(X\notin A)\cdot 0 = \mathbb{P}(\mathbb{1}_{A}=1)\cdot 1 + \mathbb{P}(\mathbb{1}_A=0)\cdot 0 = \sum_i i \cdot \mathbb{P}(\mathbb{1}_A=i) = \mathbb{E}[\mathbb{1}_{A}].
