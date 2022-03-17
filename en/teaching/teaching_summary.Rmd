@@ -40,7 +40,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Mar 17, 2022**
 
-$\underline{Understand\,\,distribution\,,\,of\,\,a\,\,random\,\,variable\,\,(a\,\,simplified\,\,version)}$
+$\underline{Understand\,\,distribution\,\,of\,\,a\,\,random\,\,variable\,\,(a\,\,simplified\,\,version)}$
 
 If my note on May 15, 2022 is too much, please check this simplified explanation and lemma. 
 
