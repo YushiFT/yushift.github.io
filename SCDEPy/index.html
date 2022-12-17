@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to SCDEPy’s documentation! &#8212; SCDEPy 0.1 documentation</title>
+    <title>SCDEPy (Version 0.1) &#8212; SCDEPy 0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -32,8 +32,16 @@
 
           <div class="body" role="main">
             
-  <section id="welcome-to-scdepy-s-documentation">
-<h1>Welcome to SCDEPy’s documentation!<a class="headerlink" href="#welcome-to-scdepy-s-documentation" title="Permalink to this heading">¶</a></h1>
+  <section id="scdepy-version-0-1">
+<h1>SCDEPy (Version 0.1)<a class="headerlink" href="#scdepy-version-0-1" title="Permalink to this heading">¶</a></h1>
+<p><strong>SCDEPy</strong> is a Python package for single-cell data analysis, with
+a special focus on detecting appropriate probabilistic models while categorizing
+various featuring types of genes under a specific condition.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This project is under active development. It also serves as a final project
+for the course APC524 (Fall 2022) at Princeton University.</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -44,6 +52,33 @@
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
+<section id="module-1-special-genes-identifications">
+<h2>Module 1: Special Genes Identifications<a class="headerlink" href="#module-1-special-genes-identifications" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; in_genematrix = &#39;~/src/data/es_mef_small.csv&#39;</span>
+<span class="go">&gt;&gt;&gt; gene_anno = annotate_genes(in_genematrix, sep = &#39;,&#39;, n_condition1=20, n_condition2=20)</span>
+<span class="go">&gt;&gt;&gt; ADGene_id = abnormal_dispersed_genes_id(gene_anno)</span>
+<span class="go">&gt;&gt;&gt; HEGene_id = highly_expressed_genes_id(gene_anno)</span>
+</pre></div>
+</div>
+</section>
+<section id="module-2-differential-expressioin-analysis">
+<h2>Module 2: Differential Expressioin Analysis<a class="headerlink" href="#module-2-differential-expressioin-analysis" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; esc1 = [&#39;ESC_13&#39;,&#39;ESC_14&#39;,&#39;ESC_15&#39;,&#39;ESC_16&#39;]</span>
+<span class="go">&gt;&gt;&gt; mef2 = [&#39;MEF_59&#39;,&#39;MEF_60&#39;,&#39;MEF_61&#39;,&#39;MEF_62&#39;,&#39;MEF_63&#39;, &#39;MEF_64&#39;]</span>
+<span class="go">&gt;&gt;&gt; df = pd.read_csv(&#39;src/data/es_mef_small_1000gene.csv&#39;, index_col= 0)</span>
+<span class="go">&gt;&gt;&gt; position = 88</span>
+<span class="go">&gt;&gt;&gt; testgene = DiffexpTest(df,position, esc1, mef2)</span>
+</pre></div>
+</div>
+</section>
+<section id="module-3-automatic-zero-inflation-inference">
+<h2>Module 3: Automatic Zero-Inflation Inference<a class="headerlink" href="#module-3-automatic-zero-inflation-inference" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; mefes = anndata_rdata(&#39;src/AutoZI/database/MEF_ES/es.mef.small.rda&#39;)</span>
+<span class="go">&gt;&gt;&gt; vae, mefes_new = AutoZI_train(mefes,gene_select=0,cell=False,max_epochs=200)</span>
+<span class="go">&gt;&gt;&gt; is_zi_pred=analysis_vae(vae, mefes_new ,threshold=0.5,cell=False)</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
