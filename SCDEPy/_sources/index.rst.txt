@@ -3,8 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SCDEPy's documentation!
+SCDEPy (Version 0.1)
 ==================================
+
+**SCDEPy** is a Python package for single-cell data analysis, with
+a special focus on detecting appropriate probabilistic models while categorizing
+various featuring types of genes under a specific condition.
+
+.. note::
+
+   This project is under active development. It also serves as a final project
+   for the course APC524 (Fall 2022) at Princeton University.
 
 .. toctree::
    :maxdepth: 2
@@ -18,3 +27,33 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Module 1: Special Genes Identifications
+----------------------------------------
+
+.. code-block:: console
+
+   >>> in_genematrix = '~/src/data/es_mef_small.csv'
+   >>> gene_anno = annotate_genes(in_genematrix, sep = ',', n_condition1=20, n_condition2=20)
+   >>> ADGene_id = abnormal_dispersed_genes_id(gene_anno)
+   >>> HEGene_id = highly_expressed_genes_id(gene_anno)
+
+Module 2: Differential Expressioin Analysis
+-------------------------------------------
+
+.. code-block:: console
+
+   >>> esc1 = ['ESC_13','ESC_14','ESC_15','ESC_16']
+   >>> mef2 = ['MEF_59','MEF_60','MEF_61','MEF_62','MEF_63', 'MEF_64']
+   >>> df = pd.read_csv('src/data/es_mef_small_1000gene.csv', index_col= 0)
+   >>> position = 88
+   >>> testgene = DiffexpTest(df,position, esc1, mef2)
+
+Module 3: Automatic Zero-Inflation Inference
+--------------------------------------------
+
+.. code-block:: console
+
+   >>> mefes = anndata_rdata('src/AutoZI/database/MEF_ES/es.mef.small.rda')
+   >>> vae, mefes_new = AutoZI_train(mefes,gene_select=0,cell=False,max_epochs=200)
+   >>> is_zi_pred=analysis_vae(vae, mefes_new ,threshold=0.5,cell=False)
