@@ -174,7 +174,7 @@ img {
 
 .container {
   margin: 0 auto;
-  max-width: 120.0rem;
+  max-width: none;
   width: 100%;
   padding-left: 2.0rem;
   padding-right: 2.0rem;
@@ -316,13 +316,25 @@ img {
 }
 
 .avatar img {
-  width: 20rem;
+  width: clamp(16rem, 30vw, 40rem);
   height: auto;
   border-radius: 50%;
-  @media only screen and (max-device-width: 768px) {
-    width: 10rem;
+  @media only screen and (max-device-width: 920px) {
+    width: 36rem;
   }
 }
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: clamp(10rem, 16vw, 21rem);
+  height: auto;
+  border-radius: 50%;
+}
+
 
 .list {
   ul {
