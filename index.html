@@ -133,8 +133,22 @@
     .pub-link { white-space: nowrap; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
     .section-action { margin-top: 2.2rem; }
 
+    .software-grid { display: grid; grid-template-columns: 1.15fr .85fr .85fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .software-card { position: relative; min-height: 390px; padding: clamp(1.6rem, 3vw, 2.5rem); background: var(--ink); color: white; display: flex; flex-direction: column; overflow: hidden; transition: background .25s, transform .25s; }
+    .software-card::after { content: ""; position: absolute; width: 130px; height: 130px; right: -65px; bottom: -65px; border: 1px solid rgba(231,117,0,.65); border-radius: 50%; box-shadow: 0 0 0 22px rgba(231,117,0,.08), 0 0 0 44px rgba(231,117,0,.04); }
+    .software-card:hover { background: var(--green-dark); }
+    .software-card.featured { background: var(--green-dark); }
+    .software-topline { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .software-type { color: var(--orange-soft); font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .software-language { border: 1px solid rgba(255,255,255,.2); border-radius: 99px; padding: .25rem .55rem; color: rgba(255,255,255,.65); font-size: .7rem; }
+    .software-card h3 { margin: auto 0 1rem; color: white; font-size: clamp(2rem, 3.4vw, 3.1rem); }
+    .software-card p { margin: 0 0 1.4rem; color: rgba(255,255,255,.7); font-size: .92rem; }
+    .software-card a { position: relative; z-index: 1; align-self: flex-start; color: var(--orange-soft); font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .software-card a:hover { color: white; }
+    .software-note { display: flex; justify-content: space-between; gap: 2rem; margin-top: 1.5rem; color: var(--muted); font-size: .84rem; }
+
     .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 8vw, 7rem); }
-    .subhead { margin: 0 0 2rem; font-size: clamp(2rem, 4vw, 3.2rem); }
+    .subhead { margin: 0 0 2rem; font-size: clamp(1.5rem, 3.6vw, 2.8rem); }
     .timeline-item { position: relative; padding: 0 0 2rem 1.6rem; border-left: 1px solid var(--rule); }
     .timeline-item::before { content: ""; position: absolute; left: -5px; top: .45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); }
     .timeline-item h3 { margin: 0 0 .25rem; font-family: var(--sans); font-size: 1rem; font-weight: 600; letter-spacing: 0; }
@@ -233,7 +247,7 @@
         <div class="reveal">
           <p class="eyebrow">Biostatistics · Causal Inference · Statistical Learning and Computing </p>
           <h2>Hi, I'm Yushi</h2>
-          <p class="hero-deck">Advancing causal inference and developing statistically principled methods across genomics, biomedicine, and environmental systems.</p>
+          <p class="hero-deck">Transforming genomic, multimodal biomedical, and environmental data into reliable biomedical insights through principled statistical methods.</p>
           <div class="hero-meta">
             <span>Postdoct in Biostatistics</span>
             <span class="princeton-mark">Princeton PhD '26</span>
@@ -308,6 +322,7 @@
           <span class="section-number">03 / Selected work</span>
         </div>
         <div class="reveal">
+          <h3 class="subhead">Statistical Genetics and Genomics</h3>
           <article class="publication">
             <div class="pub-year">2026</div>
             <div><h3 class="pub-title">A generalized test of genotype–phenotype causality in population-sampled nuclear families</h3><p class="pub-meta"><strong>Tang Y</strong> and Storey JD · <em>PLOS Genetics</em> 22(7): e1012231</p></div>
@@ -323,33 +338,88 @@
             <div><h3 class="pub-title">Comparison of variant callers using 60,532 multi-ancestry whole-genome sequences</h3><p class="pub-meta">Zhou H, Li Z, Shyr D, Li X, Yang H, Dey R, <strong>Tang Y</strong>, Maier R, Boerwinkle E, Buyske S, Daly M, Felsenfeld A, Gibbs RA, Gupta N, Hall IM, Matise T, Metcalf GA, Smith A, Reeves C, Sofia HJ, Stitziel NO, Zody MC, NHGRI Genome Sequencing Program (GSP) Consortium, Neale B, Lin X · <em>Briefings in Bioinformatics</em> 27(2): bbag130</p></div>
             <a class="pub-link" href="https://doi.org/10.1093/bib/bbag130" target="_blank" rel="noopener">View paper ↗</a>
           </article>
+          <h3 class="subhead"><br>Biomedical Informatics</h3>
+          <article class="publication">
+            <div class="pub-year">2018</div>
+            <div><h3 class="pub-title">Machine learning with k-means dimensional reduction for predicting survival outcomes in patients with breast cancer </h3><p class="pub-meta">Zhao M, <strong>Tang Y</strong>, Kim H, and Hasegawa K · <em>Cancer Informatics</em> 17: 1176935118810215</p></div>
+            <a class="pub-link" href="https://doi.org/10.1177/1176935118810215" target="_blank" rel="noopener">View paper ↗</a>
+          </article>
+          <h3 class="subhead"><br>Environmental Statistics</h3>
           <article class="publication">
             <div class="pub-year">2024</div>
-            <div><h3 class="pub-title">Global WWTP Microbiome-based Integrative Information Platform: From experience to intelligence</h3><p class="pub-meta">F. Xiong, Z. Su, <strong>Tang Y</strong>, T. Dai, and D. Wen · <em>Environmental Science and Ecotechnology</em> 20: 100370</p></div>
+            <div><h3 class="pub-title">Global WWTP Microbiome-based Integrative Information Platform: From experience to intelligence </h3><p class="pub-meta"> Xiong F, Su Z, <strong>Tang Y</strong>, Dai T, and Wen D · <em>Environmental Science and Ecotechnology</em> 20: 100370</p></div>
             <a class="pub-link" href="https://doi.org/10.1016/j.ese.2023.100370" target="_blank" rel="noopener">View paper ↗</a>
           </article>
           <article class="publication">
+            <div class="pub-year">2023</div>
+            <div><h3 class="pub-title">Screening of priority antibiotics in Chinese seawater based on the persistence, bioaccumulation, toxicity and resistance </h3><p class="pub-meta">Li F, Bao Y, Chen L, Su Z, <strong>Tang Y</strong>, and Wen D · <em>Environmental International</em> 179: 108140</p></div>
+            <a class="pub-link" href="https://doi.org/10.1016/j.envint.2023.108140" target="_blank" rel="noopener">View paper ↗</a>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2023</div>
+            <div><h3 class="pub-title">Industrial effluents boosted antibiotic resistome risk in coastal environments </h3><p class="pub-meta"> Su Z, Wen D, Gu AZ, Zheng Y, <strong>Tang Y</strong>, and Chen L · <em>Environmental International</em> 171: 107714</p></div>
+            <a class="pub-link" href="https://doi.org/10.1016/j.envint.2022.107714" target="_blank" rel="noopener">View paper ↗</a>
+          </article>
+          <article class="publication">
             <div class="pub-year">2020</div>
-            <div><h3 class="pub-title">A tripartite microbial-environment network indicates how crucial microbes influence the microbial community ecology</h3><p class="pub-meta"><strong>Tang Y</strong>, Dai T, Su Z, Hasegawa K, Tian J, Chen L, and Wen D · <em>Microbial Ecology</em> 79: 342–356</p></div>
+            <div><h3 class="pub-title">A tripartite microbial-environment network indicates how crucial microbes influence the microbial community ecology </h3><p class="pub-meta"><strong>Tang Y</strong>, Dai T, Su Z, Hasegawa K, Tian J, Chen L, and Wen D · <em>Microbial Ecology</em> 79: 342–356</p></div>
             <a class="pub-link" href="https://doi.org/10.1007/s00248-019-01421-8" target="_blank" rel="noopener">View paper ↗</a>
           </article>
           <article class="publication">
             <div class="pub-year">2018</div>
-            <div><h3 class="pub-title">Machine learning with k-means dimensional reduction for predicting survival outcomes in patients with breast cancer.</h3><p class="pub-meta">Zhao M, <strong>Tang Y</strong>, Kim H, and Hasegawa K · <em>Cancer Informatics</em> 17: 1176935118810215</p></div>
-            <a class="pub-link" href="https://doi.org/10.1177/1176935118810215" target="_blank" rel="noopener">View paper ↗</a>
+            <div><h3 class="pub-title"> Dynamics of sediment microbial functional capacity and community interaction networks in an urbanized coastal estuary </h3><p class="pub-meta">Dai T, Zhang Y, Ning D, Su Z, <strong>Tang Y</strong>, Huang B, Mu Q, and Wen D · <em>Frontiers in Microbiology</em> 9: 2731</p></div>
+            <a class="pub-link" href="https://doi.org/10.3389/fmicb.2018.02731" target="_blank" rel="noopener">View paper ↗</a>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2018</div>
+            <div><h3 class="pub-title"> Sediment bacterial community structures and their predicted functions implied the impacts from natural processes and anthropogenic activities in coastal area </h3><p class="pub-meta">Su Z, Dai T, <strong>Tang Y</strong>, Tao Y, Huang B, Mu Q, and Wen D · <em>Marine Pollution Bulletin</em> 131: 481–495</p></div>
+            <a class="pub-link" href="https://doi.org/10.1016/j.marpolbul.2018.04.052" target="_blank" rel="noopener">View paper ↗</a>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2016</div>
+            <div><h3 class="pub-title"> Identifying the key taxonomic categories that characterize microbial community diversity using full-scale classification: a case study of microbial community in the sediments of Hangzhou Bay </h3><p class="pub-meta">Dai T, Zhang Y, <a><strong>Tang Y</strong></a>, Bai Y, Tao, Y, Huang B, and Wen D · <em>FEMS Microbiology Ecology</em> 92(10): fiw150</p></div>
+            <a class="pub-link" href="https://doi.org/10.1093/femsec/fiw150" target="_blank" rel="noopener">View paper ↗</a>
           </article>
         </div>
-        <div class="section-action reveal"><a class="button" href="https://yushift.github.io/en/publication/publication_summary.html">View all publications by topics →</a></div>
+        <div class="section-action reveal"><a class="button" href="https://scholar.google.com/citations?hl=en&amp;user=VSPpxuUAAAAJ">View all publications and preprints →</a></div>
       </div>
     </section>
 
     
+    <section id="software">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-number">04 / Software and beyond</span>
+        </div>
+        <div class="software-grid stagger">
+          <article class="software-card featured">
+            <div class="software-topline"><span class="software-type">R package</span><span class="software-language">R</span></div>
+            <h3>geneticTMT</h3>
+            <p>Implements the Transmission Mean Test and generalized Transmission Mean Test for causal inference of genotype–phenotype relationships in population-sampled parent–child trios and nuclear families.</p>
+            <a href="https://github.com/StoreyLab/geneticTMT" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+          <article class="software-card">
+            <div class="software-topline"><span class="software-type">Reproducible analysis</span><span class="software-language">HTML</span></div>
+            <h3>causal-trio</h3>
+            <p>Code and reproducible analyses accompanying the TMT framework for identifying causal genotype–phenotype relationships in population-sampled parent–child trios.</p>
+            <a href="https://github.com/StoreyLab/causal-trio" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+          <article class="software-card">
+            <div class="software-topline"><span class="software-type">Research code</span><span class="software-language">TeX + code</span></div>
+            <h3>causal-nuclear-family</h3>
+            <p>Research materials for generalized family-based causal inference with multiple offspring, shared family structure, and a broad range of outcome types.</p>
+            <a href="https://github.com/StoreyLab/causal-nuclear-family" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+        </div>
+        <div class="software-note reveal"><span>Open methods · Reproducible workflows · Documented research code</span><a href="https://github.com/YushiFT" target="_blank" rel="noopener">All GitHub projects ↗</a></div>
+      </div>
+    </section>
 
 
     <section id="honors">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-number">04 / Recognition</span>
+          <span class="section-number">05 / Recognition</span>
         </div>
         <ul class="honors-list reveal">
           <li><strong>Reviewers’ Choice Abstract Award</strong><span>American Society of Human Genetics · 2022</span></li>
